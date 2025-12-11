@@ -45,16 +45,26 @@ Cartagena Magica is a modern, high-conversion landing page designed to promote t
     ```
 
 3.  **Configure Environment**
-    Ensure your runtime environment has the `API_KEY` variable set for the Gemini API integration.
+    Create a `.env` file in the root directory:
     ```env
-    API_KEY=your_google_gemini_api_key_here
+    VITE_API_KEY=your_google_gemini_api_key_here
     ```
 
 4.  **Run the application**
     ```bash
-    npm start
+    npm run dev
     ```
-    Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## ☁️ Deployment on Vercel
+
+1.  Push your code to a Git repository (GitHub, GitLab, Bitbucket).
+2.  Import the project into Vercel.
+3.  Vercel will automatically detect the Vite settings.
+4.  **Crucial Step**: In the Vercel Project Settings > **Environment Variables**, add:
+    *   **Key**: `API_KEY` (or `VITE_API_KEY`)
+    *   **Value**: Your actual Google Gemini API Key.
+5.  Click **Deploy**.
 
 ## 📂 Project Structure
 
@@ -72,7 +82,7 @@ Cartagena Magica is a modern, high-conversion landing page designed to promote t
 ├── types.ts            # TypeScript interfaces
 ├── App.tsx             # Main application layout
 ├── index.tsx           # Entry point
-└── index.html          # HTML template with Tailwind CDN
+└── index.html          # HTML template
 ```
 
 ## 🧠 AI Integration Details
